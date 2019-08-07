@@ -1,0 +1,16 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  justify-content: flex-end;
+  padding-bottom: 100px;
+}
+
+.hero__container {
+  width: 100%;
+}
+
+.hero__container img {
+  display: block;
+  margin-bottom: var(--space-lg);
+}

@@ -1,0 +1,27 @@
+.gallery__image-container {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide .gallery__image-container {
+  height: 480px;
+}
+
+.gallery__image-container img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.gallery__image-container figcaption {
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  color: #FFFFFF;
+  left: 0%;
+  padding: 0.5rem;
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+}

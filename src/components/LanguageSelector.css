@@ -1,0 +1,13 @@
+.form__select {
+  border: 1px solid #D7D7D7;
+  border-radius: 2px;
+  width: 100%;
+}
+
+.form__label {
+  display: block;
+  font-size: var(--font-size-xs);
+  margin-bottom: var(--space-xs);
+  text-transform: uppercase;
+  width: 100%;
+}

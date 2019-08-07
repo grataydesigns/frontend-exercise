@@ -1,33 +1,158 @@
-.App {
-  text-align: center;
+/* ==========================================================================
+   Set a max-width on page containers for the grid and content
+   ========================================================================== */
+
+
+.container {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 15px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+/* ==========================================================================
+   Icon styles
+   ========================================================================== */
+
+.icon {
+  height: 24px;
+  width: 24px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.icon--size-xs {
+  height: 16px;
+  width: 16px;
+}
+
+/* ==========================================================================
+   List group styles – used for episode list
+   ========================================================================== */
+
+.list-group {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list-group p {
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+
+.list-group__item {
+  margin-bottom: 1rem;
+}
+
+.list-group__item span {
+  font-size: 14px;
+}
+
+.list-group__item span + span {
+  margin-left: 0.5rem;
+}
+
+.list-group__item span + span .icon {
+  position: relative;
+  top: 3px;
+}
+
+/* ==========================================================================
+   Button Styles
+   ========================================================================== */
+
+.button {
+  background: #FF3D00;
+  border: 2px solid #FF3D00;
+  border-radius: 2px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.25;
+  padding: 12px 32px;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #DD2C00;
+  border-color: #DD2C00;
+}
+
+/* ==========================================================================
+   Author quote
+   ========================================================================== */
+
+.author {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.author--on-dark {
+  color: #FFFFFF
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.author-image {
+  border-radius: 100%;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+/* ==========================================================================
+   Bands
+   ========================================================================== */
+
+.band {
+  padding: 2rem 0;
+}
+
+.band--gradient-background {
+  background-image: linear-gradient( 107deg,  rgba(255,67,5,1) 11.1%, rgba(245,135,0,1) 95.3% );
+}
+
+/* ==========================================================================
+   Grid Layout Styles
+   ========================================================================== */
+
+/*
+   Layout with an auto-generated number of columns
+   ========================================================================== */
+
+.gallery-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@supports (grid-area: auto) {
+  .gallery-grid {
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/*
+   Grid spaning columns
+   ========================================================================== */
+
+@media only screen and (min-width: 600px) {
+  @supports (grid-area:auto) {
+    .grid-container {
+      display: grid;
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+      grid-template-columns: repeat(12, 1fr);
+    }
+    .grid-col--9 {
+      grid-column-end: span 9;
+    }
+
+    .grid-col--3 {
+      grid-column-end: span 3;
+    }
   }
 }

@@ -1,0 +1,25 @@
+.site-header {
+  left: 0;
+  padding: var(--space-md) 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.site-nav {
+  text-align: right;
+}
+
+.site-nav__list {
+  display: inline-flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav__link {
+  color: #FFFFFF;
+  font-weight: 600;
+  padding: 0 var(--space-xs);
+  text-decoration: none;
+}
