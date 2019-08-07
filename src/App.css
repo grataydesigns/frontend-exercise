@@ -40,15 +40,15 @@
 }
 
 .list-group__item {
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-md);
 }
 
 .list-group__item span {
-  font-size: 14px;
+  font-size: var(--font-size-sm);
 }
 
 .list-group__item span + span {
-  margin-left: 0.5rem;
+  margin-left: var(--space-xs);
 }
 
 .list-group__item span + span .icon {
@@ -67,8 +67,8 @@
   color: #FFFFFF;
   cursor: pointer;
   display: inline-block;
-  font-weight: 600;
-  font-size: 16px;
+  font-weight: var(--font-weight-semi-bold);
+  font-size: var(--font-size-md);
   line-height: 1.25;
   padding: 12px 32px;
   text-decoration: none;
@@ -86,6 +86,7 @@
 .author {
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
@@ -97,7 +98,14 @@
 .author-image {
   border-radius: 100%;
   display: inline-block;
-  margin-right: 1rem;
+  flex: 0 0 auto;
+  margin-right: var(--space-md);
+}
+
+@media (max-width: 420px) {
+  .author-image {
+    margin-bottom: var(--space-md);
+  }
 }
 
 /* ==========================================================================
@@ -105,7 +113,7 @@
    ========================================================================== */
 
 .band {
-  padding: 2rem 0;
+  padding: 32px 0;
 }
 
 .band--gradient-background {
@@ -139,7 +147,7 @@
    Grid spaning columns
    ========================================================================== */
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
   @supports (grid-area:auto) {
     .grid-container {
       display: grid;
