@@ -19,9 +19,9 @@
 .gallery__image-container figcaption {
   background-image: linear-gradient(to right, #434343 0%, black 100%);
   color: #FFFFFF;
-  left: 0%;
-  padding: 0.5rem;
+  left: 0;
+  padding: var(--space-xxs);
   position: absolute;
-  bottom: 0%;
+  bottom: 0;
   width: 100%;
 }

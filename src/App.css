@@ -86,7 +86,6 @@
 .author {
   align-items: center;
   display: flex;
-  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
@@ -105,6 +104,12 @@
 @media (max-width: 420px) {
   .author-image {
     margin-bottom: var(--space-md);
+  }
+}
+
+@media (max-width: 768px) {
+  .author {
+    flex-wrap: wrap;
   }
 }
 
